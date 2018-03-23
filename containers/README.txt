@@ -29,7 +29,7 @@ PASSWORD=$(az acr credential show --name $REGISTRY_NAME | jq -r .passwords[0].va
 # ------
 
 # hello-golang 
-cd $DIR/../golang
+cd $DIR/golang
 
 GOOS=linux GOARCH=amd64 go build -o main main.go
 
@@ -41,7 +41,7 @@ docker tag hello-golang $REGISTRY_NAME'.azurecr.io/demo/hello-golang'
 docker push $REGISTRY_NAME'.azurecr.io/demo/hello-golang'
 
 # hello-python 
-cd $DIR/../python
+cd $DIR/python
 
 docker build -f Dockerfile -t "hello-python" .
 
