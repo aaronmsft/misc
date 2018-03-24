@@ -183,6 +183,8 @@ draft create
 
 draft up
 
+draft connect
+
 
 # WEB APP FOR CONTAINERS
 # ----------------------
